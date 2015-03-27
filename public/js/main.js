@@ -3,7 +3,7 @@
 	'use strict';
 	
 	angular
-		.module('contatoform', ['ngRoute','ngResource','ui.grid','ui.grid.edit','ngSanitize'])
+		.module('contatoform', ['ngRoute','ngResource'])
 		.config(routeConfig);
 
 	routeConfig.$inject = ['$routeProvider'];

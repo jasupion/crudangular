@@ -5,38 +5,3 @@
 	</h1>
 </div>
 
-<p ng-show="mensagem.texto">
-	{{vm.mensagem.texto}}
-</p>
-
-<a class="btn btn-primary" ng-href="#/contato" >Novo</a>
-<input ng-model="filtro" type="search" placeholder="parte do nome">
-<p>Contatos cadastrados: {{vm.contatos.length}}</p>
-
-<p class="text-info" ng-hide="vm.contatos.length">
-	Não há contatos cadastrados
-</p>
-
-<div class="table-responsive" ng-show="vm.contatos.length">
-	<table class="table table-hover">
-		<tr>
-			<th>NOME</th>
-			<th>E-MAIL</th>
-			<th class="text-center">Ação</th>
-		</tr>
-		<tr ng-repeat="contato in vm.contatos | filter: filtro">
-			<td>
-				<a ng-href="#/contato/{{contato._id}}">{{contato.nome}}</a>
-			</td>
-			<td>
-				{{contato.email}}
-			</td>
-			<td class="text-center">
-				<button class="btn btn-warning" ng-click="vm.remove(contato)">
-				Remover
-				</button>
-			</td>
-		</tr>
-	</table>
-
-</div>

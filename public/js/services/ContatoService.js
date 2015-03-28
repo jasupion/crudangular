@@ -1,23 +1,15 @@
 
-
 (function () {
-	'use strict';
+    'use strict';
 
-	angular
-		.module('')
-		.controller('', Controller);
+    angular
+        .module('contatoform')
+        .factory('Contato', Contato);
 
-	Controller.$inject = [];
+    Contato.$inject = ['$resource'];
 
-
-	/* @ngInject */
-	function Controller() {
-
-		/* jshint validthis: true */
-		var vm = this;
-
-		
-
-	}
-	
+    /* @ngInject */
+    function Contato($resource) {
+        return $resource('/contatos/:id');
+    }
 })();

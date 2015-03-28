@@ -3,7 +3,7 @@
 	'use strict';
 
 	angular
-		.module('', [])
+		.module('contatoform', ['ngRoute','ngResource'])
 		.config(routeConfig);
 
 	routeConfig.$inject = [];
